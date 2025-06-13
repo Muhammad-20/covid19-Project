@@ -14,7 +14,7 @@ if page == 'Univariate Analysis':
 
     for col in df.columns:
         st.plotly_chart(px.histogram(data_frame= df, x= col, title= col))
-    elif page == 'MultiVariate Analysis':
+elif page == 'MultiVariate Analysis':
         st.plotly_chart(px.bar(data_frame=df,x="Jurisdiction_Residence",y= "COVID_deaths"))
 
 df= pd.read_csv("cleaned_df.csv")
